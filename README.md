@@ -41,10 +41,34 @@ Cambiar de local a nube es cambiar configuración, no código.
 
 ## Requisitos
 
-- Java 21 (`java -version`)
-- Maven 3.9 (`mvn -v`)
-- Ollama con el modelo descargado: `ollama pull deepseek-r1:1.5b`
+- **Java 21** — `java -version`
+- **Maven 3.10.0** — `mvn -v` (o usar el wrapper `.\mvnw.cmd`)
+- **Ollama** con el modelo: `ollama pull deepseek-r1:1.5b`
 
 ## Cómo ejecutar
 
-> Pendiente: se completa en la Fase 0.
+```powershell
+# con el wrapper (recomendado, no requiere Maven instalado)
+.\mvnw.cmd spring-boot:run
+
+# o con Maven instalado
+mvn spring-boot:run
+```
+
+Comprobar que arranca: `http://localhost:8080/actuator/health` → `{"status":"UP"}`
+
+## Estado
+
+| # | Fase | Estado |
+|---|---|---|
+| 0 | Entorno y esqueleto | 🔄 en curso |
+| 1 | "Hola DeepSeek" con HTTP crudo | ⬜ |
+| 2 | Capa de modelo intercambiable | ⬜ |
+| 3 | Spring AI | ⬜ |
+| 4 | Prompting, roles y streaming | ⬜ |
+| 5 | Tool calling | ⬜ |
+| 6 | Bucle agéntico (ReAct) | ⬜ |
+| 7 | Memoria y estado | ⬜ |
+| 8 | Multi-agente y orquestador | ⬜ |
+| 9 | Framework y comparación | ⬜ |
+| 10 | Producción | ⬜ |
