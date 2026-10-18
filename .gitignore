@@ -1,0 +1,30 @@
+# Sistema operativo
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# IDEs / editores
+.idea/
+.vscode/
+*.iml
+*.suo
+*.user
+.settings/
+.classpath
+.project
+
+# Java / Maven
+target/
+*.class
+
+# Node
+node_modules/
+dist/
+build/
+
+# Entorno
+.env
+.env.local
+
+# Logs
+*.log
