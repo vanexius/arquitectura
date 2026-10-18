@@ -4,7 +4,7 @@ Laboratorio de aprendizaje: **orquestación de IA multi-agente** con Java y Spri
 
 ## Stack
 
-- **Java 21** + **Spring Boot 3** + **Maven**
+- **Java 25** (LTS) + **Spring Boot 4.1.1** + **Maven 3.10.0**
 - **Spring AI** (fases avanzadas)
 - **DeepSeek** como modelo, en dos modos intercambiables:
   - Local: **Ollama** con `deepseek-r1:1.5b`
@@ -25,6 +25,9 @@ Cambiar de local a nube es cambiar configuración, no código.
 
 11 fases, con teoría y ejercicios en cada una: **[docs/plan-detallado.md](docs/plan-detallado.md)**
 
+> **Para retomar el trabajo con otro agente o persona:** leer **[AGENTS.md](AGENTS.md)**
+> (contexto, entorno, decisiones, estado y próximos pasos).
+
 | # | Fase |
 |---|---|
 | 0 | Entorno y esqueleto |
@@ -41,7 +44,7 @@ Cambiar de local a nube es cambiar configuración, no código.
 
 ## Requisitos
 
-- **Java 21** — `java -version`
+- **Java 25** (LTS) — `java -version` (también funciona con Java 21)
 - **Maven 3.10.0** — `mvn -v` (o usar el wrapper `.\mvnw.cmd`)
 - **Ollama** con el modelo: `ollama pull deepseek-r1:1.5b`
 
@@ -61,7 +64,7 @@ Comprobar que arranca: `http://localhost:8080/actuator/health` → `{"status":"U
 
 | # | Fase | Estado |
 |---|---|---|
-| 0 | Entorno y esqueleto | 🔄 en curso |
+| 0 | Entorno y esqueleto | ✅ |
 | 1 | "Hola DeepSeek" con HTTP crudo | ⬜ |
 | 2 | Capa de modelo intercambiable | ⬜ |
 | 3 | Spring AI | ⬜ |
